@@ -8,12 +8,6 @@ function Key(props: {
     curCb: any;
     elemCb: any;
 }) {
-    // How to get input value if there is no state
-    // How to connect element with state
-    // How to set onclick (event listener) to react element
-    // Key why
-    // How to know state of child / input value (DOM?)
-
     let [elName, setELName] = useState(props.name);
 
     if (props.edit) {
@@ -57,10 +51,6 @@ export function Keys(props: { initialData: IItem[]; sorting: 'ASC' | 'DESC' }) {
         });
         data[index].name = name;
     }, []);
-    // Callback to change element. Convey to key and call in use effect
-    // How to change an element of array
-    // When does render
-    // When state changes is there render
     let sorted: IItem[] = data.sort();
     sorted = props.sorting === 'DESC' ? sorted.reverse() : sorted;
     return (
